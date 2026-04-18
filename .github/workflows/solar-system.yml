@@ -22,6 +22,7 @@ jobs:
             echo "failing"
             exit 1
     unit-testing:
+        needs: force-job-failure
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
@@ -46,6 +47,7 @@ jobs:
             name: Mocha-Test-Result
             path: test-results.xml
     code-coverage:
+        needs: force-job-failure
         name: Code Coverage
         runs-on: ubuntu-latest
         steps:
