@@ -14,10 +14,13 @@ env:
     
 jobs:
     force-job-failure:
-      step-failure:
+        continue-on-error: true
+        runs-on: ubuntu-latest
+        steps:
         - name: failure
           run: |
-          echo failing && exit 1
+            echo "failing"
+            exit 1
     unit-testing:
         name: Unit Testing
         runs-on: ubuntu-latest
