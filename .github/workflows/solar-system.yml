@@ -14,7 +14,7 @@ env:
     
 jobs:
     force-job-failure:
-        continue-on-error: true
+        #continue-on-error: true
         runs-on: ubuntu-latest
         steps:
         - name: failure
