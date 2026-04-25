@@ -44,7 +44,6 @@ jobs:
             name: Mocha-Test-Result
             path: test-results.xml
     code-coverage:
-        needs: force-job-failure
         name: Code Coverage
         runs-on: ubuntu-latest
         steps:
