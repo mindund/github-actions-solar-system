@@ -13,16 +13,7 @@ env:
   MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
     
 jobs:
-    force-job-failure:
-        #continue-on-error: true
-        runs-on: ubuntu-latest
-        steps:
-        - name: failure
-          run: |
-            echo "failing"
-            exit 1
     unit-testing:
-        needs: force-job-failure
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
